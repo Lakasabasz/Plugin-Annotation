@@ -6,9 +6,18 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+/**
+ *  Part of the plugin annotations framework.
+ *  <p>
+ *  Represents the website of the plugin.
+ */
+
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.TYPE})
+@Target(ElementType.TYPE)
 public @interface Website {
-	String value();
+    /**
+     * The url to the website where a user can download this plugin.
+     */
+    String value();
 }
