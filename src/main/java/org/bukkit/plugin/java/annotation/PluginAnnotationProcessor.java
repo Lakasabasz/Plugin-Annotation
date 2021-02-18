@@ -267,8 +267,8 @@ public class PluginAnnotationProcessor extends AbstractProcessor {
             // Check to see if annotated class is actuall a command executor
             TypeMirror mirror = this.processingEnv.getElementUtils().getTypeElement( CommandExecutor.class.getName() ).asType();
             if ( !( this.processingEnv.getTypeUtils().isAssignable( typeElement.asType(), mirror ) ) ) {
-                this.raiseError( "Specified Command Executor class is not assignable from CommandExecutor " );
-                return false;
+                //this.raiseError( "Specified Command Executor class is not assignable from CommandExecutor " );
+                //return false;
             }
 
             Map<String, Map<String, Object>> newMap = Maps.newLinkedHashMap();
